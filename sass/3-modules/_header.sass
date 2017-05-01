@@ -1,6 +1,8 @@
 header
   height: 450px
   background: #ccc
+  //background: url(img/hero-bg.jpg) center center
+  //background-size: cover
   .logo
     +size(50px)
     float: left
@@ -16,10 +18,7 @@ header
       display: inline-block
       margin-left: 20px
       color: rgba(0,0,0,0.6)
-      font:
-        size: 14px
-        weight: 700
-      text-transform: uppercase
+      @extend %small-bold
 
       &:hover
         color: #000
@@ -44,8 +43,6 @@ header
   .kicker
     text-align: center
     color: white
-    font:
-      weight: 700
-    text-transform: uppercase
+    @extend %small-bold
     letter-spacing: 0.05em
     line-height: 1
