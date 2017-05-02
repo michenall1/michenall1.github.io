@@ -1,0 +1,66 @@
+.alt-section
+  background: $bg-color
+
+.thumb-container
+  max-width: 960px
+  margin: 0 auto
+  padding-bottom: 150px
+  +clearfix
+
+  .thumb-unit
+    display: block
+    height: 183px
+    width: 25%
+    float: left
+    position: relative
+    //padding-top: 1%
+    overflow: hidden
+
+    @media screen and (max-width: 700px)
+      width: 33%
+    @media screen and (max-width: 540px)
+      width: 50%
+
+    img
+      display: block
+      margin: auto auto
+      transition: 0.2s
+    &:hover img
+      transform: scale(0.7)
+
+
+
+
+    .thumb-overlay
+      +position(absolute, 100% 0px null 0px)
+      height: 15%
+      background: fade_out(black, 0.5)
+      text-align: center
+      +transition
+
+      strong
+        font-weight: 600
+        font-size: 18px
+        color: #FFF
+
+
+    &:nth-child(1) .thumb-overlay
+      background: black
+    &:nth-child(3) .thumb-overlay
+      background: black
+    &:nth-child(7) .thumb-overlay
+      background: black
+    &:nth-child(8) .thumb-overlay
+      background: black
+
+
+    &:hover .thumb-overlay
+      +position(absolute, 85% 0px null 0px)
+
+
+
+@for $i from 1 through length($colors)
+  .thumb-unit:nth-child(#{length($colors)}n+#{$i})
+    background: nth($colors, $i)
+
+

@@ -183,7 +183,7 @@ header {
     line-height: 1; }
 
 h3 {
-  color: #e1c184;
+  color: #e1;
   text-align: center;
   padding: 100px 0 30px; }
 
@@ -213,7 +213,7 @@ h3 {
 .blurb {
   max-width: 620px;
   padding: 0 15px;
-  margin: 50px auto 0;
+  margin: 50px auto 100px;
   font-size: 24px;
   text-align: center; }
 
@@ -235,5 +235,88 @@ footer {
     footer .content-wrap .copyright {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.4); }
+
+.alt-section {
+  background: #F6F6F8; }
+
+.thumb-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 150px; }
+  .thumb-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .thumb-container .thumb-unit {
+    display: block;
+    height: 183px;
+    width: 25%;
+    float: left;
+    position: relative;
+    overflow: hidden; }
+    @media screen and (max-width: 700px) {
+      .thumb-container .thumb-unit {
+        width: 33%; } }
+    @media screen and (max-width: 540px) {
+      .thumb-container .thumb-unit {
+        width: 50%; } }
+    .thumb-container .thumb-unit img {
+      display: block;
+      margin: auto auto;
+      transition: 0.2s; }
+    .thumb-container .thumb-unit:hover img {
+      transform: scale(0.7); }
+    .thumb-container .thumb-unit .thumb-overlay {
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      left: 0px;
+      height: 15%;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      -webkit-transition: all 0.15s ease-out 0s;
+      -moz-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+      .thumb-container .thumb-unit .thumb-overlay strong {
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFF; }
+    .thumb-container .thumb-unit:nth-child(1) .thumb-overlay {
+      background: black; }
+    .thumb-container .thumb-unit:nth-child(3) .thumb-overlay {
+      background: black; }
+    .thumb-container .thumb-unit:nth-child(7) .thumb-overlay {
+      background: black; }
+    .thumb-container .thumb-unit:nth-child(8) .thumb-overlay {
+      background: black; }
+    .thumb-container .thumb-unit:hover .thumb-overlay {
+      position: absolute;
+      top: 85%;
+      right: 0px;
+      left: 0px; }
+
+.thumb-unit:nth-child(8n+1) {
+  background: #222; }
+
+.thumb-unit:nth-child(8n+2) {
+  background: #FFF; }
+
+.thumb-unit:nth-child(8n+3) {
+  background: #000; }
+
+.thumb-unit:nth-child(8n+4) {
+  background: #eee; }
+
+.thumb-unit:nth-child(8n+5) {
+  background: #aaa; }
+
+.thumb-unit:nth-child(8n+6) {
+  background: #444; }
+
+.thumb-unit:nth-child(8n+7) {
+  background: #000; }
+
+.thumb-unit:nth-child(8n+8) {
+  background: #111; }
 
 /*# sourceMappingURL=app.css.map */
