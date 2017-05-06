@@ -351,8 +351,8 @@ header {
     line-height: 1; }
 
 @media (max-width: 640px) {
-  header {
-    background-position: 50% 20px, 50% 50%; } }
+  header .logo {
+    margin: 10px auto 0 41%; } }
 h3 {
   text-align: center;
   padding: 100px 0 30px; }
@@ -552,6 +552,18 @@ h3 {
     top: 50%;
     right: 10px; }
 
+@media (max-width: 850px) {
+  .clients-logos {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+@media (max-width: 600px) {
+  .client-controls {
+    display: none; } }
 .section-contact {
   text-align: center; }
 
@@ -569,10 +581,7 @@ h3 {
     line-height: 70px;
     color: white;
     border-radius: 50%;
-    font-size: 28px;
-    -webkit-transition: all 0.15s ease-out 0s;
-    -moz-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s; }
+    font-size: 28px; }
     .social-links a:hover {
       -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);
@@ -594,7 +603,8 @@ h3 {
   font-size: 60px;
   font-weight: 300;
   font-family: system-ui;
-  line-height: 1; }
+  line-height: 1;
+  width: 90%; }
   .biglink:hover {
     color: #ccc; }
   .biglink:focus {
